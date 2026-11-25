@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex | Editor de Vídeo</title>
+  <style>
+    :root {
+      --bg: #0f1115;
+      --card: #181b22;
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --accent: #6366f1;
+      --accent-hover: #4f46e5;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Cabeçalho / Hero */
+    header {
+      padding: 80px 0 60px;
+      text-align: center;
+      border-bottom: 1px solid #262a34;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(99, 102, 241, 0.15);
+      color: #a5b4fc;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .btn:hover { background: var(--accent-hover); }
+
+    /* Seções */
+    section { padding: 60px 0; }
+    h2 { font-size: 1.8rem; margin-bottom: 30px; text-align: center; }
+
+    /* Grid de Vídeos */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #262a34;
+      border-radius: 12px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video-box {
+      position: relative;
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #000;
+      margin-bottom: 16px;
+    }
+
+    /* Proporção 16:9 (YouTube) e 9:16 (Reels/TikTok) */
+    .ratio-16-9 { aspect-ratio: 16 / 9; }
+    .ratio-9-16 { aspect-ratio: 9 / 16; max-height: 460px; margin: 0 auto 16px; }
+
+    .video-box iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .card h3 { font-size: 1.15rem; margin-bottom: 6px; }
+    .card p { color: var(--muted); font-size: 0.92rem; }
+
+    /* Serviços */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .service-item {
+      background: var(--card);
+      border: 1px solid #262a34;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .service-item h3 { font-size: 1.05rem; margin-bottom: 8px; color: #a5b4fc; }
+    .service-item p { font-size: 0.9rem; color: var(--muted); }
+
+    /* Rodapé */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #262a34;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      header { padding: 50px 0 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <span class="badge">Disponível para projetos</span>
+      <h1>Edição de Vídeo com Ritmo e Retenção</h1>
+      <p class="subtitle">
+        Transformo gravações brutas em Reels, TikToks, Shorts e vídeos para YouTube dinâmicos, legendados e prontos para prender a atenção do seu público.
+      </p>
+      <!-- TROQUE O NÚMERO ABAIXO PELO SEU WHATSAPP (COM DDD) -->
+      <a href="https://wa.me/5553999999999?text=Ol%C3%A1!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20um%20or%C3%A7amento%20de%20edi%C3%A7%C3%A3o." target="_blank" class="btn">
+        Pedir Orçamento no WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="portfolio">
+      <h2>Trabalhos Recentes</h2>
+      <div class="grid">
+
+        <!-- VÍDEO 1: VERTICAL (REELS / SHORTS / PODCAST) -->
+        <div class="card">
+          <div class="video-box ratio-9-16">
+            <!-- SUBSTITUA "ID_DO_VIDEO_1" PELO CÓDIGO DO SEU VÍDEO NO YOUTUBE -->
+            <iframe src="https://www.youtube.com/embed/ID_DO_VIDEO_1" allowfullscreen></iframe>
+          </div>
+          <h3>Corte Dinâmico (Reels / Shorts)</h3>
+          <p>Cortes secos para eliminar pausas, legendas dinâmicas e inserção de imagens de apoio (B-roll).</p>
+        </div>
+
+        <!-- VÍDEO 2: VERTICAL (COMERCIAL / RITMO) -->
+        <div class="card">
+          <div class="video-box ratio-9-16">
+            <!-- SUBSTITUA "ID_DO_VIDEO_2" PELO CÓDIGO DO SEU VÍDEO NO YOUTUBE -->
+            <iframe src="https://www.youtube.com/embed/ID_DO_VIDEO_2" allowfullscreen></iframe>
+          </div>
+          <h3>Vídeo Comercial / Anúncio</h3>
+          <p>Edição sincronizada com a batida da música, textos de impacto e ritmo acelerado para redes sociais.</p>
+        </div>
+
+        <!-- VÍDEO 3: HORIZONTAL (YOUTUBE) -->
+        <div class="card">
+          <div class="video-box ratio-16-9">
+            <!-- SUBSTITUA "ID_DO_VIDEO_3" PELO CÓDIGO DO SEU VÍDEO NO YOUTUBE -->
+            <iframe src="https://www.youtube.com/embed/ID_DO_VIDEO_3" allowfullscreen></iframe>
+          </div>
+          <h3>Vídeo para YouTube</h3>
+          <p>Tratamento de áudio, cortes limpos, zooms estratégicos e títulos animados para aumentar a retenção.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="servicos">
+      <h2>O que eu entrego</h2>
+      <div class="services">
+        <div class="service-item">
+          <h3>Reels, TikTok e Shorts</h3>
+          <p>Vídeos verticais de até 60s com legenda dinâmica, cortes rápidos e trilha sonora nivelada.</p>
+        </div>
+        <div class="service-item">
+          <h3>Vídeos para YouTube</h3>
+          <p>Edição completa com foco em retenção, remoção de erros/pausas e inserção de elementos visuais.</p>
+        </div>
+        <div class="service-item">
+          <h3>Entrega Rápida</h3>
+          <p>Comunicação direta e revisão inclusa para garantir que o vídeo saia exatamente como você precisa.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <!-- TROQUE PELO SEU NOME E E-MAIL -->
+      <p>Alex — Editor de Vídeo • Contato: seuemail@exemplo.com</p>
+    </div>
+  </footer>
+
+</body>
+</html>
